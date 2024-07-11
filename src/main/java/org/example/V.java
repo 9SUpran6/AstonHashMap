@@ -1,10 +1,11 @@
 package org.example;
 
 //Класс значений
-public class V {
-    String value;
+public class Value {
 
-    public V(String value) {
+    private String value;
+
+    public Value(String value) {
         this.value = value;
     }
 
@@ -15,6 +16,5 @@ public class V {
     public void setValue(String value) {
         this.value = value;
     }
-
-
 }
+
