@@ -91,4 +91,29 @@ public class MapTest {
         assertFalse(map.remove(removingElement));
     }
 
+    @Test
+    //Проверка, что если элемент не null, то переходим к следующему элементу
+    public void ifNotNullSendToNext() {
+        Key key1 = new Key(0);
+        Value value1 = new Value("Value 1");
+        Key key2 = new Key(16);
+        Value value2 = new Value("Value 2");
+        Key key3 = new Key(32);
+        Value value3 = new Value("Value 3");
+        map.put(key1, value1);
+        map.put(key2, value2);
+        map.put(key3, value3);
+        assertEquals(0, Math.abs(key1.hashCode() % 16));
+        assertEquals(0, Math.abs(key2.hashCode() % 16));
+        assertEquals(0, Math.abs(key3.hashCode() % 16));
+        assertEquals(3, map.size());
+        assertNotNull(map.get(key1));
+        assertNotNull(map.get(key2));
+        assertNotNull(map.get(key3));
+        Key removingElement = key2;
+        assertTrue(map.remove(removingElement));
+        assertEquals(2, map.size());
+        assertFalse(map.remove(removingElement));
+    }
+
 }
