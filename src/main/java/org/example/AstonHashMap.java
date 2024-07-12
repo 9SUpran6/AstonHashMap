@@ -3,7 +3,7 @@ package org.example;
 import java.util.List;
 import java.util.Set;
 //Реализован интерфейс ХэшМап таблицы с ее основными методами
-public interface Map<K, V> {
+public interface AstonHashMap<K, V> {
 //Метод вложения пары ключ-значение в таблицу
     void put(K key, V value);
 //Метод получения значения по ключу
