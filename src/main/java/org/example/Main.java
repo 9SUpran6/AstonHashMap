@@ -3,7 +3,7 @@ package org.example;
 import java.util.*;
 
 //Прежде всего реализуем интерфейс Map с помощью команды "implements"
-public class Main<K,V> implements Map<K, V>{
+public class Main<K,V> implements AstonHashMap<K, V>{
 
 //Вводим константы первичного размера массива и коэффициента заполнения
 //При котором массив будет увеличиваться вдвое
