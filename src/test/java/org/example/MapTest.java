@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 
 public class MapTest {
-    private Map<Key, Value> map;
+    private AstonHashMap<Key, Value> map;
 
     @Before
     public void setUp() throws Exception {
